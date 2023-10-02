@@ -1,0 +1,3 @@
+/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build/CMakeFiles/hello_world.dir
+/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build/CMakeFiles/ALL_BUILD.dir
+/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build/CMakeFiles/ZERO_CHECK.dir
