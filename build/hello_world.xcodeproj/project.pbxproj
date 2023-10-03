@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -34,26 +34,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		28F902801FCC424AA210BCFD /* /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = ADEF4555E1A24EE7B281678D /* /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/CMakeLists.txt */; };
-		52A6E1F2ACEB4503A53F3B1B /* /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/src/main.c */ = {isa = PBXBuildFile; fileRef = D100D09259D04C459BEF5C3E /* /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/src/main.c */; };
+		52A6E1F2ACEB4503A53F3B1B /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D100D09259D04C459BEF5C3E /* main.c */; };
+		66B1793B2ACC5E0C00342ACF /* perlin.c in Sources */ = {isa = PBXBuildFile; fileRef = 66B1793A2ACC5E0C00342ACF /* perlin.c */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXBuildStyle section */
-		1FB968D1E25348EAB663B1AE /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		BE9E99B085B240FDB7650571 /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-/* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
 		09C8C92C287B4CB594E2FA76 /* PBXContainerItemProxy */ = {
@@ -80,10 +63,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4D5A746769D741749577F905 /* /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		97E8786047E24804BFECB98B /* hello_world */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libhello_world.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADEF4555E1A24EE7B281678D /* /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		D100D09259D04C459BEF5C3E /* /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/src/main.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = main.c; path = src/main.c; sourceTree = SOURCE_ROOT; };
+		4D5A746769D741749577F905 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		66B179392ACC5E0C00342ACF /* perlin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = perlin.h; path = src/perlin.h; sourceTree = "<group>"; };
+		66B1793A2ACC5E0C00342ACF /* perlin.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = perlin.c; path = src/perlin.c; sourceTree = "<group>"; };
+		97E8786047E24804BFECB98B /* libhello_world.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libhello_world.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADEF4555E1A24EE7B281678D /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D100D09259D04C459BEF5C3E /* main.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = main.c; path = src/main.c; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +85,9 @@
 		27FF23B3473F41E3B2CB2C30 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				D100D09259D04C459BEF5C3E /* /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/src/main.c */,
+				D100D09259D04C459BEF5C3E /* main.c */,
+				66B179392ACC5E0C00342ACF /* perlin.h */,
+				66B1793A2ACC5E0C00342ACF /* perlin.c */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
@@ -119,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				27FF23B3473F41E3B2CB2C30 /* Source Files */,
-				ADEF4555E1A24EE7B281678D /* /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/CMakeLists.txt */,
+				ADEF4555E1A24EE7B281678D /* CMakeLists.txt */,
 			);
 			name = hello_world;
 			sourceTree = "<group>";
@@ -127,7 +114,7 @@
 		6D2CEACE8F96416294A6D2A8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				97E8786047E24804BFECB98B /* hello_world */,
+				97E8786047E24804BFECB98B /* libhello_world.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				E432DE90C02E440BA06DE378 /* CMake Rules */,
-				4D5A746769D741749577F905 /* /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/CMakeLists.txt */,
+				4D5A746769D741749577F905 /* CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
 			sourceTree = "<group>";
@@ -173,7 +160,7 @@
 			);
 			name = hello_world;
 			productName = hello_world;
-			productReference = 97E8786047E24804BFECB98B /* hello_world */;
+			productReference = 97E8786047E24804BFECB98B /* libhello_world.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -182,18 +169,16 @@
 		5B36ADE29DA6428989CBEBDB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 			};
 			buildConfigurationList = 51C6468033A644DDAA488981 /* Build configuration list for PBXProject "hello_world" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				BE9E99B085B240FDB7650571 /* Debug */,
-				1FB968D1E25348EAB663B1AE /* Release */,
-			);
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
 			mainGroup = 3463D0AAF3D54A77BB7B8553;
 			projectDirPath = "/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World";
 			projectRoot = "";
@@ -206,21 +191,6 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3C0110FC8322DE7E50886E21 = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
 		7CC0715647FDA093A03BFC07 /* Generate CMakeFiles/ALL_BUILD */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -231,19 +201,11 @@ exit 0";
 			);
 			name = "Generate CMakeFiles/ALL_BUILD";
 			outputPaths = (
-"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build/CMakeFiles/ALL_BUILD"			);
+				"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build/CMakeFiles/ALL_BUILD",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e
-if test \"$CONFIGURATION\" = \"Debug\"; then :
-  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"
-  echo Build\\ all\\ projects
-fi
-if test \"$CONFIGURATION\" = \"Release\"; then :
-  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"
-  echo Build\\ all\\ projects
-fi
-";
+			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"\n  echo Build\\ all\\ projects\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		7E720354269681E818496F6A /* CMake PostBuild Rules */ = {
@@ -257,39 +219,7 @@ fi
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e
-if test \"$CONFIGURATION\" = \"Debug\"; then :
-  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"
-  /opt/homebrew/Cellar/cmake/3.27.6/bin/cmake -E copy /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/Debug/libhello_world.dylib /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/Source/pdex.dylib
-  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"
-  /Users/pablomac/Developer/PlaydateSDK/bin/pdc -sdkpath /Users/pablomac/Developer/PlaydateSDK /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/Source /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/hello_world.pdx
-  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"
-  /opt/homebrew/Cellar/cmake/3.27.6/bin/cmake -E cmake_symlink_library /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/Debug/libhello_world.dylib /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/Debug/libhello_world.dylib /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/Debug/libhello_world.dylib
-fi
-if test \"$CONFIGURATION\" = \"Release\"; then :
-  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"
-  /opt/homebrew/Cellar/cmake/3.27.6/bin/cmake -E copy /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/Release/libhello_world.dylib /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/Source/pdex.dylib
-  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"
-  /Users/pablomac/Developer/PlaydateSDK/bin/pdc -sdkpath /Users/pablomac/Developer/PlaydateSDK /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/Source /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/hello_world.pdx
-  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"
-  /opt/homebrew/Cellar/cmake/3.27.6/bin/cmake -E cmake_symlink_library /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/Release/libhello_world.dylib /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/Release/libhello_world.dylib /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/Release/libhello_world.dylib
-fi
-";
-			showEnvVarsInLog = 0;
-		};
-		9B50530E35CC49C82C2FACCF = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
+			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"\n  /opt/homebrew/Cellar/cmake/3.27.6/bin/cmake -E copy /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/Debug/libhello_world.dylib /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/Source/pdex.dylib\n  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"\n  /Users/pablomac/Developer/PlaydateSDK/bin/pdc -sdkpath /Users/pablomac/Developer/PlaydateSDK /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/Source /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/hello_world.pdx\n  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"\n  /opt/homebrew/Cellar/cmake/3.27.6/bin/cmake -E cmake_symlink_library /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/Debug/libhello_world.dylib /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/Debug/libhello_world.dylib /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/Debug/libhello_world.dylib\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"\n  /opt/homebrew/Cellar/cmake/3.27.6/bin/cmake -E copy /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/Release/libhello_world.dylib /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/Source/pdex.dylib\n  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"\n  /Users/pablomac/Developer/PlaydateSDK/bin/pdc -sdkpath /Users/pablomac/Developer/PlaydateSDK /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/Source /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/hello_world.pdx\n  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"\n  /opt/homebrew/Cellar/cmake/3.27.6/bin/cmake -E cmake_symlink_library /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/Release/libhello_world.dylib /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/Release/libhello_world.dylib /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/Release/libhello_world.dylib\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D50D6F6740F7B97AB1F1C673 /* Generate CMakeFiles/ZERO_CHECK */ = {
@@ -302,19 +232,11 @@ exit 0";
 			);
 			name = "Generate CMakeFiles/ZERO_CHECK";
 			outputPaths = (
-"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build/CMakeFiles/ZERO_CHECK"			);
+				"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build/CMakeFiles/ZERO_CHECK",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e
-if test \"$CONFIGURATION\" = \"Debug\"; then :
-  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"
-  make -f /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/CMakeScripts/ReRunCMake.make
-fi
-if test \"$CONFIGURATION\" = \"Release\"; then :
-  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"
-  make -f /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/CMakeScripts/ReRunCMake.make
-fi
-";
+			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"\n  make -f /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/CMakeScripts/ReRunCMake.make\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd \"/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build\"\n  make -f /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\\ World/build/CMakeScripts/ReRunCMake.make\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -324,7 +246,8 @@ fi
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52A6E1F2ACEB4503A53F3B1B /* /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/src/main.c */,
+				52A6E1F2ACEB4503A53F3B1B /* main.c in Sources */,
+				66B1793B2ACC5E0C00342ACF /* perlin.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,16 +281,19 @@ fi
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_LDFLAGS = " $(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
+				WARNING_CFLAGS = "$(inherited)";
 			};
 			name = Debug;
 		};
@@ -389,16 +315,19 @@ fi
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_LDFLAGS = " $(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
+				WARNING_CFLAGS = "$(inherited)";
 			};
 			name = Debug;
 		};
@@ -426,20 +355,42 @@ fi
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",hello_world_EXPORTS,"'TARGET_SIMULATOR=1'","'TARGET_EXTENSION=1'","$(inherited)");
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					hello_world_EXPORTS,
+					"'TARGET_SIMULATOR=1'",
+					"'TARGET_EXTENSION=1'",
+					"$(inherited)",
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/pablomac/Developer/PlaydateSDK/C_API,"$(inherited)");
+				HEADER_SEARCH_PATHS = (
+					/Users/pablomac/Developer/PlaydateSDK/C_API,
+					"$(inherited)",
+				);
 				INSTALL_PATH = "@rpath";
 				LIBRARY_STYLE = DYNAMIC;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = ("    -DNDEBUG '-std=gnu11' -fPIC -Wall -Wstrict-prototypes -Wno-unknown-pragmas -Wdouble-promotion ","$(inherited)");
-				OTHER_LDFLAGS = (" -dynamiclib -Wl,-headerpad_max_install_names","$(inherited)");
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu11'",
+					"-fPIC",
+					"-Wall",
+					"-Wstrict-prototypes",
+					"-Wno-unknown-pragmas",
+					"-Wdouble-promotion",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+					"$(inherited)",
+				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = hello_world;
 				SECTORDER_FLAGS = "";
 				TARGET_TEMP_DIR = "/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build/build/hello_world.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
+				WARNING_CFLAGS = "$(inherited)";
 			};
 			name = Release;
 		};
@@ -452,16 +403,19 @@ fi
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_LDFLAGS = " $(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
+				WARNING_CFLAGS = "$(inherited)";
 			};
 			name = Release;
 		};
@@ -479,20 +433,41 @@ fi
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",hello_world_EXPORTS,"'TARGET_SIMULATOR=1'","'TARGET_EXTENSION=1'","$(inherited)");
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					hello_world_EXPORTS,
+					"'TARGET_SIMULATOR=1'",
+					"'TARGET_EXTENSION=1'",
+					"$(inherited)",
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/pablomac/Developer/PlaydateSDK/C_API,"$(inherited)");
+				HEADER_SEARCH_PATHS = (
+					/Users/pablomac/Developer/PlaydateSDK/C_API,
+					"$(inherited)",
+				);
 				INSTALL_PATH = "@rpath";
 				LIBRARY_STYLE = DYNAMIC;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = ("   '-std=gnu11' -fPIC -Wall -Wstrict-prototypes -Wno-unknown-pragmas -Wdouble-promotion           ","$(inherited)");
-				OTHER_LDFLAGS = (" -dynamiclib -Wl,-headerpad_max_install_names","$(inherited)");
+				OTHER_CFLAGS = (
+					"'-std=gnu11'",
+					"-fPIC",
+					"-Wall",
+					"-Wstrict-prototypes",
+					"-Wno-unknown-pragmas",
+					"-Wdouble-promotion",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+					"$(inherited)",
+				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = hello_world;
 				SECTORDER_FLAGS = "";
 				TARGET_TEMP_DIR = "/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build/build/hello_world.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
+				WARNING_CFLAGS = "$(inherited)";
 			};
 			name = Debug;
 		};
@@ -505,16 +480,19 @@ fi
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_LDFLAGS = " $(inherited)";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
+				WARNING_CFLAGS = "$(inherited)";
 			};
 			name = Release;
 		};

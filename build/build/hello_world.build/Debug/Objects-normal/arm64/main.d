@@ -9,4 +9,5 @@ dependencies: \
   /Users/pablomac/Developer/PlaydateSDK/C_API/pd_api/pd_api_sprite.h \
   /Users/pablomac/Developer/PlaydateSDK/C_API/pd_api/pd_api_sound.h \
   /Users/pablomac/Developer/PlaydateSDK/C_API/pd_api/pd_api_display.h \
-  /Users/pablomac/Developer/PlaydateSDK/C_API/pd_api/pd_api_scoreboards.h
+  /Users/pablomac/Developer/PlaydateSDK/C_API/pd_api/pd_api_scoreboards.h \
+  /Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello\ World/src/perlin.h
