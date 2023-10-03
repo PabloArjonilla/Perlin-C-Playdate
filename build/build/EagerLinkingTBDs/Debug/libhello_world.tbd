@@ -7,5 +7,5 @@ current-version: 0
 compatibility-version: 0
 exports:
   - targets:         [ arm64-macos ]
-    symbols:         [ _eventHandler ]
+    symbols:         [ _eventHandler, _pd, _rowbytes, _screenBuffer, _screenBufferData ]
 ...
