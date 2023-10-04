@@ -3,6 +3,7 @@
 
 #include "pd_api.h"
 #include "perlin.h"
+#include "math.h"
 
 static int update(void* userdata);
 
@@ -11,15 +12,15 @@ PlaydateAPI* pd;
 typedef struct {
     uint32_t x;
     uint32_t y;
-    uint8_t drawDistance;
+    int drawDistance;
     float fov;
 } camera_t;
 
 camera_t camera = {
     .x = 20000,
     .y = 20000,
-    .drawDistance = 400,
-    .fov = 45.0
+    .drawDistance = 800,
+    .fov = M_PI/4
 };
 
 //Rendering
@@ -39,10 +40,7 @@ int deltaTimeMS;
 
 
 //Movement
-uint32_t positionX = 2000;
-uint32_t positionY = 2000;
-float speed = 0.001f;
-
+float speed = 0.1f;
 
 
 int eventHandler(PlaydateAPI* playdate, PDSystemEvent event, uint32_t arg)
@@ -66,24 +64,26 @@ static void moveCamera(void){
     pd->system->getButtonState(&current, NULL, NULL);
     
     //LOG
-    //pd->system->logToConsole("X:%d - Y:%d ------ MS:%d",positionX, positionY, deltaTimeMS);
+    //pd->system->logToConsole("X:%d - Y:%d ------ MS:%d",positionX, positionY);
+  
+    if (current & kButtonUp) {
+        camera.y -= speed * deltaTimeMS;
+    } else if (current & kButtonDown) {
+        camera.y += speed * deltaTimeMS;
+    }
     
-    if ( current & kButtonUp ) {
-        positionY -= speed * deltaTimeMS;
-    } else if ( current & kButtonDown ) {
-        positionY += speed * deltaTimeMS;
+    if (current & kButtonLeft) {
+        camera.x -= speed * deltaTimeMS;
+    } else if (current & kButtonRight) {
+        camera.x += speed * deltaTimeMS;
     }
-    if ( current & kButtonLeft ) {
-        positionX -= speed * deltaTimeMS;
-    } else if ( current & kButtonRight ) {
-        positionX += speed * deltaTimeMS;
-    }
+
 }
 
 
-static void projectView(uint32_t cameraX, uint32_t cameraY, uint8_t drawDistance, float fov){
+static void projectView(uint32_t cameraX, uint32_t cameraY, int drawDistance, float fov){
     
-    float distance = drawDistance * fov;
+    float distance = drawDistance * tanf(fov);
     
     float plx = - distance;
     float ply = distance;
@@ -91,39 +91,46 @@ static void projectView(uint32_t cameraX, uint32_t cameraY, uint8_t drawDistance
     float prx = distance;
     float pry = distance;
     
+    //pd->system->logToConsole("x=%f, y=%f, distance=%f, plx=%f, ply=%f, prx=%f, pry=%f", cameraX, cameraY, distance,  plx, ply, prx, pry);
+    
     for (int i = 0; i < 400; i++)
     {
-        float deltaX = (plx + (prx-plx)/400*i)/drawDistance;
-        float deltaY = (ply + (pry-ply)/400*i)/drawDistance;
+        float deltaX = (plx + ((prx - plx) / 400 * i)) / drawDistance;
+        float deltaY = (ply + ((pry - ply) / 400 * i)) / drawDistance;
         
         //pd->system->logToConsole("deltaX = %f, deltaY = %f", deltaX, deltaY);
-    
+        
         float rx = cameraX;
         float ry = cameraY;
         
-        float maxHeight = 239;
+        int maxHeight = 239;
         
-        for (int z = 1; z < camera.drawDistance; z++)
+        for (int z = 1; z < drawDistance; z++)
         {
             rx += deltaX;
             ry -= deltaY;
             
-            float height = perlin2d(rx, ry, 0.01, 1);
-            float screenHeight = perlin2d(rx, ry, 0.01, 1)*239;
+            float height = perlin2d(rx, ry, 0.005, 2);
+            float color = perlin2d(rx, ry, 0.02, 1);
             
-
-            //pd->system->logToConsole("rx = %f --- ry= %f...... height:%f",rx, ry, height);
-     
+            float screenHeight = ((239 * height/ z) * 90) + 50 ;
+            
+            if(screenHeight<0){
+                screenHeight = 0;
+            }else if (screenHeight > 239){
+                screenHeight = 239;
+            }
+            
+            //pd->system->logToConsole("Current height is %f, and screen height is %d", height , screenHeight);
+            
             if(screenHeight<maxHeight){
                 
                 for(int y = screenHeight; y < maxHeight; y++){
-
+                    
                     int byteIndex = 52 * y + i / 8; //52 Rowbytes
                     int bitIndex = 7 - i % 8;
                     
-                    screenBufferData[byteIndex] &= ~(1 << bitIndex);
-
-                    if(height>mtx9c[y%4][i%4]){
+                    if(color>mtx9c[y%4][i%4]-0.1f){
                         screenBufferData[byteIndex] &= ~(1 << bitIndex);
                     }else{
                         screenBufferData[byteIndex] |= (1 << bitIndex);
@@ -131,30 +138,15 @@ static void projectView(uint32_t cameraX, uint32_t cameraY, uint8_t drawDistance
                     
                 }
                 
-                maxHeight = height;
+                maxHeight = screenHeight;
             }
         }
-    }
-}
-
-static void updateBuffer(void){
-    for (int y = 0; y < 240; y++)
-    {
-        for (int x = 0; x < 400; x++)
-        {
-            {
-                int byteIndex = 52 * y + x / 8; //52 Rowbytes
-                int bitIndex = 7 - x % 8;
-                
-                //pd->system->logToConsole("%f ----",perlin2d(x+scroll, y+scroll, 0.1, 4), "", "");
-                //pd->system->logToConsole("%f ----",mtx9c[0][0], "", "");
-                
-                if(perlin2d(x+positionX, y+positionY, 0.001, 4)>mtx9c[y%4][x%4]){
-                    screenBufferData[byteIndex] &= ~(1 << bitIndex);
-                }else{
-                    screenBufferData[byteIndex] |= (1 << bitIndex);
-                }
-            }
+        
+        for(int y = 0; y < maxHeight; y++){
+    
+            int byteIndex = 52 * y + i / 8;
+            int bitIndex = 7 - i % 8;
+            screenBufferData[byteIndex] |= (1 << bitIndex);
         }
     }
 }
@@ -165,10 +157,9 @@ static int update(void* userdata){
     deltaTimeMS = pd->system->getCurrentTimeMilliseconds() - lastFrame;
     lastFrame = pd->system->getCurrentTimeMilliseconds();
     
-    //moveCamera();
+    moveCamera();
     projectView(camera.x,camera.y, camera.drawDistance, camera.fov);
-    //updateBuffer();
-    
+
     pd->graphics->drawBitmap(screenBuffer, 0, 0, 0);
     pd->system->drawFPS(10,10);
     pd->system->resetElapsedTime();
