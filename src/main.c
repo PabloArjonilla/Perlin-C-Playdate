@@ -10,6 +10,7 @@ LCDBitmap* screenBuffer;
 int rowbytes;
 uint8_t* screenBufferData;
 int scroll = 0;
+float mtx9c[4][4] = {{8.0/9, 4.0/9, 7.0/9, 3.0/9},{2.0/9, 6.0/9, 1.0/9, 5.0/9}, {7.0/9, 3.0/9, 8.0/9, 4.0/9},{1.0/9, 5.0/9, 2.0/9, 6.0/9}};
 
 static int update(void* userdata);
 
@@ -26,7 +27,7 @@ int eventHandler(PlaydateAPI* playdate, PDSystemEvent event, uint32_t arg)
         pd->system->setUpdateCallback(update, pd);
         screenBuffer = pd->graphics->newBitmap(400, 240, kColorWhite);
         pd->graphics->getBitmapData(screenBuffer, NULL, NULL, &rowbytes, NULL, &screenBufferData);
-        pd->display->setRefreshRate(1);
+        pd->display->setRefreshRate(50);
     }
     return 0;
 }
@@ -40,9 +41,11 @@ static void updateBuffer(int scroll){
             {
                 int byteIndex = rowbytes * y + x / 8;
                 int bitIndex = 7 - x % 8;
-     
-               //pd->system->logToConsole("%f ---- %f",perlin2d(x+scroll, y+scroll, 0.1, 4), noise2d(x+scroll, y+scroll)/256 , "", "");
-                if(perlin2d(x+scroll, y+scroll, 0.1, 4)>0.5f){
+                
+                //pd->system->logToConsole("%f ----",perlin2d(x+scroll, y+scroll, 0.1, 4), "", "");
+                //pd->system->logToConsole("%f ----",mtx9c[0][0], "", "");
+               
+                if(perlin2d(x+scroll, y+scroll, 0.01, 4)>mtx9c[y%4][x%4]){
                     screenBufferData[byteIndex] &= ~(1 << bitIndex);
                 }else{
                     screenBufferData[byteIndex] |= (1 << bitIndex);
@@ -52,9 +55,6 @@ static void updateBuffer(int scroll){
     }
 }
 
-
-//BLACK screenBufferData[byteIndex] &= ~(1 << bitIndex);
-//WHITE screenBufferData[byteIndex] |= (1 << bitIndex);
 static int update(void* userdata){
     //Check player location
     
