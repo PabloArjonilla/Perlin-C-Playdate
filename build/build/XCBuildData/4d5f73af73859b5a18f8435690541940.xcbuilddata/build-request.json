@@ -6,7 +6,7 @@
   },
   "configuredTargets" : [
     {
-      "guid" : "e988c68a0d6d85ee1355cc0ac6416684c1b2ba1caab8f98d3b4fcd4b90e5b5b8"
+      "guid" : "e988c68a0d6d85ee1355cc0ac64166848f9bf421f36b5c48e5e69a80742e816a"
     }
   ],
   "containerPath" : "/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build/hello_world.xcodeproj",
@@ -46,9 +46,10 @@
       }
     }
   },
+  "qos" : "default",
   "schemeCommand" : "launch",
   "showNonLoggedProgress" : true,
-  "useDryRun" : false,
+  "useDryRun" : true,
   "useImplicitDependencies" : true,
   "useLegacyBuildLocations" : false,
   "useParallelTargets" : true

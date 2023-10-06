@@ -8,6 +8,6 @@ compatibility-version: 0
 exports:
   - targets:         [ arm64-macos ]
     symbols:         [ _camera, _deltaTimeMS, _eventHandler, _lastFrame, _lin_inter, 
-                       _mtx9c, _noise2, _noise2d, _pd, _perlin2d, _screenBuffer, 
+                       _mtx17c, _mtx9c, _noise2, _noise2d, _pd, _perlin2d, _screenBuffer, 
                        _screenBufferData, _scroll, _smooth_inter, _speed ]
 ...

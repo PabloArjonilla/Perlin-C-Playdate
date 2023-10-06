@@ -17,7 +17,7 @@
             >
             <BuildableReference
                BuildableIdentifier="primary"
-               BlueprintIdentifier="66528DA1FE4E440E897AD485"
+               BlueprintIdentifier="14ACF863EFFC41EF90671926"
                BuildableName="libhello_world.dylib"
                BlueprintName="hello_world"
                ReferencedContainer="container:build/hello_world.xcodeproj"/>
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier="primary"
-            BlueprintIdentifier="66528DA1FE4E440E897AD485"
+            BlueprintIdentifier="14ACF863EFFC41EF90671926"
             BuildableName="libhello_world.dylib"
             BlueprintName="hello_world"
             ReferencedContainer="container:build/hello_world.xcodeproj"/>

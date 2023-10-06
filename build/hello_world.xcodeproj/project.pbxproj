@@ -7,9 +7,22 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		960B4D6E02D143E3B85FAE3C /* ZERO_CHECK */ = {
+		129AE3793AEE47CEA5AB2286 /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = D3936D065254414FA2D1FABE /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = 35B5BBB2329747F6B7D2D211 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				7CC0715647FDA093A03BFC07 /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				C1EAF0B0370B4B428526E806 /* PBXTargetDependency */,
+				FBE878E3F437458683C0A972 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		E3E761BA182C40FF9C84DC22 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2AD6BD66ACF848A484BA6ABF /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
 				D50D6F6740F7B97AB1F1C673 /* Generate CMakeFiles/ZERO_CHECK */,
 			);
@@ -18,61 +31,48 @@
 			name = ZERO_CHECK;
 			productName = ZERO_CHECK;
 		};
-		CE9BAC92929A4785853D528A /* ALL_BUILD */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = A59E0BF936A14C739BB0AB80 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
-			buildPhases = (
-				7CC0715647FDA093A03BFC07 /* Generate CMakeFiles/ALL_BUILD */,
-			);
-			dependencies = (
-				FBBCB378121F4AEC88C71AA2 /* PBXTargetDependency */,
-				4DC4A488DFD543EA8C8B0E7A /* PBXTargetDependency */,
-			);
-			name = ALL_BUILD;
-			productName = ALL_BUILD;
-		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		52A6E1F2ACEB4503A53F3B1B /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D100D09259D04C459BEF5C3E /* main.c */; };
-		66B1793B2ACC5E0C00342ACF /* perlin.c in Sources */ = {isa = PBXBuildFile; fileRef = 66B1793A2ACC5E0C00342ACF /* perlin.c */; };
+		1AC140FFA6154E2AA982C7F6 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F02384D12F9E4755B0FFE4FE /* main.c */; };
+		6609F20D2ACE991D0017364F /* perlin.c in Sources */ = {isa = PBXBuildFile; fileRef = 6609F20C2ACE991D0017364F /* perlin.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		09C8C92C287B4CB594E2FA76 /* PBXContainerItemProxy */ = {
+		955382FFE1334D799E66FE46 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5B36ADE29DA6428989CBEBDB /* Project object */;
+			containerPortal = BC69FE993FEA4F6EA310FF4E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 960B4D6E02D143E3B85FAE3C;
+			remoteGlobalIDString = E3E761BA182C40FF9C84DC22;
 			remoteInfo = ZERO_CHECK;
 		};
-		0DD00D8A44F545CBBDBA7247 /* PBXContainerItemProxy */ = {
+		9921A067966D4A41BBBFF0C8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5B36ADE29DA6428989CBEBDB /* Project object */;
+			containerPortal = BC69FE993FEA4F6EA310FF4E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 960B4D6E02D143E3B85FAE3C;
-			remoteInfo = ZERO_CHECK;
-		};
-		CAA68190D6334764AFFB3C0C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B36ADE29DA6428989CBEBDB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 66528DA1FE4E440E897AD485;
+			remoteGlobalIDString = 14ACF863EFFC41EF90671926;
 			remoteInfo = hello_world;
+		};
+		B891126721804368992C8A98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC69FE993FEA4F6EA310FF4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3E761BA182C40FF9C84DC22;
+			remoteInfo = ZERO_CHECK;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4D5A746769D741749577F905 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		66B179392ACC5E0C00342ACF /* perlin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = perlin.h; path = src/perlin.h; sourceTree = "<group>"; };
-		66B1793A2ACC5E0C00342ACF /* perlin.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = perlin.c; path = src/perlin.c; sourceTree = "<group>"; };
-		97E8786047E24804BFECB98B /* libhello_world.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libhello_world.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADEF4555E1A24EE7B281678D /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		D100D09259D04C459BEF5C3E /* main.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = main.c; path = src/main.c; sourceTree = SOURCE_ROOT; };
+		144F3CD988324B0C8A41E90E /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		6609F20B2ACE991D0017364F /* perlin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = perlin.h; path = src/perlin.h; sourceTree = "<group>"; };
+		6609F20C2ACE991D0017364F /* perlin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = perlin.c; path = src/perlin.c; sourceTree = "<group>"; };
+		9D644C556A124D13905FE119 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F02384D12F9E4755B0FFE4FE /* main.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = main.c; path = src/main.c; sourceTree = SOURCE_ROOT; };
+		F630A9FA746A4BBCA6585637 /* libhello_world.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libhello_world.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		335A639C2BB64EEE8C5C304A /* Frameworks */ = {
+		06CDFD6B5EEE4E4BAA3A488E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -82,60 +82,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		27FF23B3473F41E3B2CB2C30 /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				D100D09259D04C459BEF5C3E /* main.c */,
-				66B179392ACC5E0C00342ACF /* perlin.h */,
-				66B1793A2ACC5E0C00342ACF /* perlin.c */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		3463D0AAF3D54A77BB7B8553 = {
-			isa = PBXGroup;
-			children = (
-				4D8B3942839447D6ADA5BA7A /* hello_world */,
-				CE1E530FC69C414F9DC21224 /* ALL_BUILD */,
-				6D2CEACE8F96416294A6D2A8 /* Products */,
-				81B3F8D4BE6D47D2978AC93A /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		4D8B3942839447D6ADA5BA7A /* hello_world */ = {
-			isa = PBXGroup;
-			children = (
-				27FF23B3473F41E3B2CB2C30 /* Source Files */,
-				ADEF4555E1A24EE7B281678D /* CMakeLists.txt */,
-			);
-			name = hello_world;
-			sourceTree = "<group>";
-		};
-		6D2CEACE8F96416294A6D2A8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				97E8786047E24804BFECB98B /* libhello_world.dylib */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		81B3F8D4BE6D47D2978AC93A /* Frameworks */ = {
+		0EF18DA516C44255BF698D53 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CE1E530FC69C414F9DC21224 /* ALL_BUILD */ = {
+		10EE903E30D3492F9852EF7F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E432DE90C02E440BA06DE378 /* CMake Rules */,
-				4D5A746769D741749577F905 /* CMakeLists.txt */,
+				F630A9FA746A4BBCA6585637 /* libhello_world.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DE753CDDCC245D1B86DCBAF /* hello_world */ = {
+			isa = PBXGroup;
+			children = (
+				49CD3235C8744BBA8124E7CC /* Source Files */,
+				9D644C556A124D13905FE119 /* CMakeLists.txt */,
+			);
+			name = hello_world;
+			sourceTree = "<group>";
+		};
+		49CD3235C8744BBA8124E7CC /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				6609F20C2ACE991D0017364F /* perlin.c */,
+				6609F20B2ACE991D0017364F /* perlin.h */,
+				F02384D12F9E4755B0FFE4FE /* main.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		69D52A70739D4C578CC6FC83 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				CB4BC7F3BBAE4E34A5F9A24C /* CMake Rules */,
+				144F3CD988324B0C8A41E90E /* CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
 			sourceTree = "<group>";
 		};
-		E432DE90C02E440BA06DE378 /* CMake Rules */ = {
+		9EA08471D79946A6ACB21B6C = {
+			isa = PBXGroup;
+			children = (
+				3DE753CDDCC245D1B86DCBAF /* hello_world */,
+				69D52A70739D4C578CC6FC83 /* ALL_BUILD */,
+				10EE903E30D3492F9852EF7F /* Products */,
+				0EF18DA516C44255BF698D53 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CB4BC7F3BBAE4E34A5F9A24C /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -145,33 +145,33 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		66528DA1FE4E440E897AD485 /* hello_world */ = {
+		14ACF863EFFC41EF90671926 /* hello_world */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A3F9BD9D0C645DB838721FC /* Build configuration list for PBXNativeTarget "hello_world" */;
+			buildConfigurationList = 9C1F03B0BD0C42F9A9C40B6F /* Build configuration list for PBXNativeTarget "hello_world" */;
 			buildPhases = (
-				1E12A987023E4ECAA0884574 /* Sources */,
-				335A639C2BB64EEE8C5C304A /* Frameworks */,
+				C28C6FFE10824CF287CD6B3A /* Sources */,
+				06CDFD6B5EEE4E4BAA3A488E /* Frameworks */,
 				7E720354269681E818496F6A /* CMake PostBuild Rules */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				988E47A428864241BC499471 /* PBXTargetDependency */,
+				CAA7E0E61A4B4E339C6F449C /* PBXTargetDependency */,
 			);
 			name = hello_world;
 			productName = hello_world;
-			productReference = 97E8786047E24804BFECB98B /* libhello_world.dylib */;
+			productReference = F630A9FA746A4BBCA6585637 /* libhello_world.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5B36ADE29DA6428989CBEBDB /* Project object */ = {
+		BC69FE993FEA4F6EA310FF4E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1430;
 			};
-			buildConfigurationList = 51C6468033A644DDAA488981 /* Build configuration list for PBXProject "hello_world" */;
+			buildConfigurationList = 4998DABC24024A58B2967907 /* Build configuration list for PBXProject "hello_world" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -179,13 +179,13 @@
 				en,
 				Base,
 			);
-			mainGroup = 3463D0AAF3D54A77BB7B8553;
+			mainGroup = 9EA08471D79946A6ACB21B6C;
 			projectDirPath = "/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World";
 			projectRoot = "";
 			targets = (
-				CE9BAC92929A4785853D528A /* ALL_BUILD */,
-				960B4D6E02D143E3B85FAE3C /* ZERO_CHECK */,
-				66528DA1FE4E440E897AD485 /* hello_world */,
+				129AE3793AEE47CEA5AB2286 /* ALL_BUILD */,
+				E3E761BA182C40FF9C84DC22 /* ZERO_CHECK */,
+				14ACF863EFFC41EF90671926 /* hello_world */,
 			);
 		};
 /* End PBXProject section */
@@ -242,37 +242,37 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1E12A987023E4ECAA0884574 /* Sources */ = {
+		C28C6FFE10824CF287CD6B3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52A6E1F2ACEB4503A53F3B1B /* main.c in Sources */,
-				66B1793B2ACC5E0C00342ACF /* perlin.c in Sources */,
+				1AC140FFA6154E2AA982C7F6 /* main.c in Sources */,
+				6609F20D2ACE991D0017364F /* perlin.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4DC4A488DFD543EA8C8B0E7A /* PBXTargetDependency */ = {
+		C1EAF0B0370B4B428526E806 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 960B4D6E02D143E3B85FAE3C /* ZERO_CHECK */;
-			targetProxy = 09C8C92C287B4CB594E2FA76 /* PBXContainerItemProxy */;
+			target = 14ACF863EFFC41EF90671926 /* hello_world */;
+			targetProxy = 9921A067966D4A41BBBFF0C8 /* PBXContainerItemProxy */;
 		};
-		988E47A428864241BC499471 /* PBXTargetDependency */ = {
+		CAA7E0E61A4B4E339C6F449C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 960B4D6E02D143E3B85FAE3C /* ZERO_CHECK */;
-			targetProxy = 0DD00D8A44F545CBBDBA7247 /* PBXContainerItemProxy */;
+			target = E3E761BA182C40FF9C84DC22 /* ZERO_CHECK */;
+			targetProxy = 955382FFE1334D799E66FE46 /* PBXContainerItemProxy */;
 		};
-		FBBCB378121F4AEC88C71AA2 /* PBXTargetDependency */ = {
+		FBE878E3F437458683C0A972 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66528DA1FE4E440E897AD485 /* hello_world */;
-			targetProxy = CAA68190D6334764AFFB3C0C /* PBXContainerItemProxy */;
+			target = E3E761BA182C40FF9C84DC22 /* ZERO_CHECK */;
+			targetProxy = B891126721804368992C8A98 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0C36D28FFED348199EEDCBC5 /* Debug */ = {
+		0929668215884ED88613AA4D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -290,23 +290,24 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = " $(inherited)";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
+				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "$(inherited)";
 			};
-			name = Debug;
+			name = Release;
 		};
-		1D26A2A621904EC89EBE7EDD /* Debug */ = {
+		2259C91167AD4C558E5633CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = arm64;
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build/build";
 			};
-			name = Debug;
+			name = Release;
 		};
-		25D4CBF69F1F41A29B903878 /* Debug */ = {
+		597E815F5310429AB42793CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -331,17 +332,68 @@
 			};
 			name = Debug;
 		};
-		355E8032C71F4CC3941C29E1 /* Release */ = {
+		61D77290DDF64BE9B4366454 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = arm64;
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
-				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build/build";
 			};
-			name = Release;
+			name = Debug;
 		};
-		5C136A34F8814E71B8E2B5AB /* Release */ = {
+		75E228AE86CD46EC8DBC6236 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build/Debug";
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					hello_world_EXPORTS,
+					"'TARGET_SIMULATOR=1'",
+					"'TARGET_EXTENSION=1'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/pablomac/Developer/PlaydateSDK/C_API,
+					"$(inherited)",
+				);
+				INSTALL_PATH = "@rpath";
+				LIBRARY_STYLE = DYNAMIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"'-std=gnu11'",
+					"-fPIC",
+					"-Wall",
+					"-Wstrict-prototypes",
+					"-Wno-unknown-pragmas",
+					"-Wdouble-promotion",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = hello_world;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build/build/hello_world.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		7E0D5CEFFF894D01AFCE91F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -394,84 +446,7 @@
 			};
 			name = Release;
 		};
-		87099897743940178A446697 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = " $(inherited)";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = Release;
-		};
-		992117EDC7F340C9824F2E9F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build/Debug";
-				DYLIB_COMPATIBILITY_VERSION = "";
-				DYLIB_CURRENT_VERSION = "";
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .dylib;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
-					hello_world_EXPORTS,
-					"'TARGET_SIMULATOR=1'",
-					"'TARGET_EXTENSION=1'",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					/Users/pablomac/Developer/PlaydateSDK/C_API,
-					"$(inherited)",
-				);
-				INSTALL_PATH = "@rpath";
-				LIBRARY_STYLE = DYNAMIC;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = (
-					"'-std=gnu11'",
-					"-fPIC",
-					"-Wall",
-					"-Wstrict-prototypes",
-					"-Wno-unknown-pragmas",
-					"-Wdouble-promotion",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = (
-					"-dynamiclib",
-					"-Wl,-headerpad_max_install_names",
-					"$(inherited)",
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = hello_world;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/pablomac/Documents/Desarrollo/gamedev/playdate/examples/Hello World/build/build/hello_world.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = "$(inherited)";
-			};
-			name = Debug;
-		};
-		D68F7789A2634222971091F4 /* Release */ = {
+		893F0C056C6F4630B5B4A94F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -496,46 +471,71 @@
 			};
 			name = Release;
 		};
+		9EF1C4DE2130495188B801F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		51C6468033A644DDAA488981 /* Build configuration list for PBXProject "hello_world" */ = {
+		2AD6BD66ACF848A484BA6ABF /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1D26A2A621904EC89EBE7EDD /* Debug */,
-				355E8032C71F4CC3941C29E1 /* Release */,
+				597E815F5310429AB42793CE /* Debug */,
+				0929668215884ED88613AA4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		8A3F9BD9D0C645DB838721FC /* Build configuration list for PBXNativeTarget "hello_world" */ = {
+		35B5BBB2329747F6B7D2D211 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				992117EDC7F340C9824F2E9F /* Debug */,
-				5C136A34F8814E71B8E2B5AB /* Release */,
+				9EF1C4DE2130495188B801F6 /* Debug */,
+				893F0C056C6F4630B5B4A94F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		A59E0BF936A14C739BB0AB80 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		4998DABC24024A58B2967907 /* Build configuration list for PBXProject "hello_world" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0C36D28FFED348199EEDCBC5 /* Debug */,
-				D68F7789A2634222971091F4 /* Release */,
+				61D77290DDF64BE9B4366454 /* Debug */,
+				2259C91167AD4C558E5633CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		D3936D065254414FA2D1FABE /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		9C1F03B0BD0C42F9A9C40B6F /* Build configuration list for PBXNativeTarget "hello_world" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				25D4CBF69F1F41A29B903878 /* Debug */,
-				87099897743940178A446697 /* Release */,
+				75E228AE86CD46EC8DBC6236 /* Debug */,
+				7E0D5CEFFF894D01AFCE91F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5B36ADE29DA6428989CBEBDB /* Project object */;
+	rootObject = BC69FE993FEA4F6EA310FF4E /* Project object */;
 }

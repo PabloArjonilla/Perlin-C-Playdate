@@ -32,6 +32,8 @@ project(${PLAYDATE_GAME_NAME} C ASM)
 
 if (TOOLCHAIN STREQUAL "armgcc")
 	add_executable(${PLAYDATE_GAME_DEVICE} src/main.c)
+	add_executable(${PLAYDATE_GAME_DEVICE} src/perlin.h)
+	add_executable(${PLAYDATE_GAME_DEVICE} src/perlin.c)
 else()
 	add_library(${PLAYDATE_GAME_NAME} SHARED src/main.c )
 endif()

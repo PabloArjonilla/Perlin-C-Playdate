@@ -17,7 +17,7 @@
             >
             <BuildableReference
                BuildableIdentifier="primary"
-               BlueprintIdentifier="960B4D6E02D143E3B85FAE3C"
+               BlueprintIdentifier="E3E761BA182C40FF9C84DC22"
                BuildableName="ZERO_CHECK"
                BlueprintName="ZERO_CHECK"
                ReferencedContainer="container:build/hello_world.xcodeproj"/>
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier="primary"
-            BlueprintIdentifier="960B4D6E02D143E3B85FAE3C"
+            BlueprintIdentifier="E3E761BA182C40FF9C84DC22"
             BuildableName="ZERO_CHECK"
             BlueprintName="ZERO_CHECK"
             ReferencedContainer="container:build/hello_world.xcodeproj"/>
